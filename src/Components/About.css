@@ -1,0 +1,225 @@
+:root {
+  --bg-deep: #0b1220;
+  --card-bg: #161f31;
+  --accent-cyan: #22d3ee;
+  --accent-purple: #a855f7;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-section {
+  background-color: var(--bg-deep);
+  padding: 100px 2rem;
+  display: flex;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.about-container {
+  max-width: 1100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* Left Column: Profile Card */
+.about-left {
+  position: sticky;
+  top: 120px;
+}
+
+.profile-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+
+.profile-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%);
+  transition: var(--transition);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(11, 18, 32, 0.9) 0%, transparent 100%);
+  text-align: left;
+}
+
+.card-label {
+  display: block;
+  color: var(--accent-cyan);
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-name {
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.card-location {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* Hover Effect: Glow */
+.profile-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(34, 211, 238, 0.3);
+}
+
+.profile-card:hover .profile-img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* Right Column: Content */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-number {
+  color: var(--accent-cyan);
+  font-family: 'Fira Code', monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.section-title {
+  color: var(--text-primary);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Education Block */
+.education-block {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.block-label {
+  color: var(--accent-cyan);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.edu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.edu-degree {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.edu-school {
+  display: block;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.edu-meta {
+  text-align: right;
+}
+
+.edu-dates {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.edu-gpa {
+  display: block;
+  color: var(--accent-cyan);
+  font-size: 0.85rem;
+  margin-top: 4px;
+  font-family: 'Fira Code', monospace;
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.social-link {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  color: var(--text-primary);
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .about-left {
+    position: relative;
+    top: 0;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .edu-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .edu-meta {
+    text-align: left;
+  }
+}

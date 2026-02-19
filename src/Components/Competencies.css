@@ -1,0 +1,153 @@
+:root {
+    --bg-deep: #0b1220;
+    --bg-card: #151c2c;
+    --text-white: #ffffff;
+    --text-gray: #94a3b8;
+    --accent-cyan: #22d3ee;
+    --accent-purple: #a855f7;
+    --accent-green: #10b981;
+}
+
+.competencies-section {
+    background-color: var(--bg-deep);
+    padding: 100px 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.comp-container {
+    max-width: 1100px;
+    width: 100%;
+}
+
+/* Header Styles */
+.comp-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.comp-label {
+    display: block;
+    color: var(--accent-cyan);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    margin-bottom: 12px;
+}
+
+.comp-title {
+    color: var(--text-white);
+    font-size: clamp(32px, 5vw, 42px);
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.comp-subtitle {
+    color: var(--text-gray);
+    font-size: 1.05rem;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Grid Layout */
+.comp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+/* Card Styles */
+.comp-card {
+    background-color: var(--bg-card);
+    border-radius: 20px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.comp-card:hover {
+    transform: translateY(-8px);
+    background-color: #1a2336;
+    border-color: var(--card-accent);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5),
+        0 0 15px -5px var(--card-accent);
+}
+
+/* Theme Colors */
+.cyan-theme {
+    --card-accent: var(--accent-cyan);
+}
+
+.purple-theme {
+    --card-accent: var(--accent-purple);
+}
+
+.green-theme {
+    --card-accent: var(--accent-green);
+}
+
+/* Icon Styling */
+.comp-icon-box {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: var(--card-accent);
+    margin-bottom: 24px;
+}
+
+.comp-card-title {
+    color: var(--text-white);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+/* List Styling */
+.comp-skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comp-skill-item {
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.skill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--card-accent);
+    box-shadow: 0 0 8px var(--card-accent);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .comp-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .comp-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .competencies-section {
+        padding: 60px 1.5rem;
+    }
+}

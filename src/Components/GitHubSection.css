@@ -1,0 +1,103 @@
+.github-section {
+    background-color: #0b1220;
+    padding: 80px 2rem;
+    color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+}
+
+.github-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Activity Card Styling */
+.activity-card {
+    background: #111a2e;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 2rem;
+}
+
+.calendar-overflow {
+    margin-top: 1.5rem;
+    overflow-x: auto;
+    /* Ensures it doesn't break on mobile */
+}
+
+/* Repo Grid Styling */
+.repo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.repo-card {
+    background: #111a2e;
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.repo-card:hover {
+    transform: translateY(-5px);
+    border-color: #22d3ee;
+    background: #16223a;
+}
+
+.repo-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.repo-stars {
+    color: #22d3ee;
+    font-size: 0.85rem;
+    font-family: 'Fira Code', monospace;
+}
+
+.repo-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.repo-desc {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.repo-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.repo-lang {
+    color: #22d3ee;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.repo-link {
+    color: #fff;
+    opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .repo-grid {
+        grid-template-columns: 1fr;
+    }
+}
